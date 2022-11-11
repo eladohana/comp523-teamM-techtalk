@@ -40,8 +40,21 @@ Test API route
 
 
 # Step 4
+
 Create Navbar
+
 Add new folder ```components``` and add new file ```NavBar.js```
+
 Create new file ```NavBar.module.css```
+
 Add elements for navigation for ```/```, ```/cats``` and ```/dogs```
+
 Add the NavBar component to ```_app.js```
+
+# Step 4
+
+Create Container for images
+
+Add component ```Container.js``` with ```Image``` component that takes prop ```{url}```
+
+Add the component to the ```cats.js``` file with your favorite cat image
