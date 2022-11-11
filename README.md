@@ -39,3 +39,9 @@ Test API route
 ```http://localhost:3000/api/hello```
 
 
+# Step 4
+Create Navbar
+Add new folder ```components``` and add new file ```NavBar.js```
+Create new file ```NavBar.module.css```
+Add elements for navigation for ```/```, ```/cats``` and ```/dogs```
+Add the NavBar component to ```_app.js```
