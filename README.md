@@ -28,3 +28,14 @@ Replace all the return values in index.js to
 Refresh the page on the browser to see the new text
 
 
+Create fies ```cats.js``` and ```dogs.js``` inside the ```pages``` folder
+
+Add code from github repo
+
+Test ```http://localhost:3000/cats```
+Test ```http://localhost:3000/dogs```
+
+Test API route
+```http://localhost:3000/api/hello```
+
+
