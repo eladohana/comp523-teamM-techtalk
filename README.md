@@ -19,4 +19,12 @@ Run development server
 ```cd catsanddogs```
 ```yarn dev```
 
+Open webpage on browser, use URL:
+```http://localhost:3000```
+
+Test that webpage is responsive
+Replace all the return values in index.js to 
+```<div>Hello world</div>```
+Refresh the page on the browser to see the new text
+
 
