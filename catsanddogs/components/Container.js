@@ -3,6 +3,7 @@ const Container = ({url}) => {
   return (
     <div>
       <Image 
+        alt=""
         src={url}
         width={"100%"}
         height={"100%"}
