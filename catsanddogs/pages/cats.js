@@ -5,25 +5,20 @@ import cat1 from "../public/cat1.jpg"
 import cat0 from "../public/cat0.jpg"
 
 const cats = () => {
-  const [image, setImage] = useState(cat1)
-
-  let catImage = cat1
+  const [image, setImage] = useState()
 
   function changeImage() {
-    // console.log(catImage)
-    catImage = cat1 ? cat0 : cat1;
-    // useEffect();
+    setImage(image == cat1 ? cat0 : cat1);
   }
 
   useEffect(()=>{
-    console.log(catImage, image)
-    setImage(catImage)
-  }, [image])
+    setImage(cat1)
+  }, [])
   
   return (
     <div>
       <h1>Cats</h1>
-      <Container url={catImage}/>
+      <Container url={image}/>
       <Button onclick={changeImage}/>
     </div>
   )
