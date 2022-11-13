@@ -7,15 +7,6 @@ import cat0 from "../public/cat0.jpg"
 
 const cats = () => {
   const images = [cat1, cat0]
-  // const [image, setImage] = useState()
-
-  // function changeImage() {
-  //   setImage(image == cat1 ? cat0 : cat1);
-  // }
-
-  // useEffect(()=>{
-  //   setImage(cat1)
-  // }, [])
   
   return (
     <PageBody title="Cats" images={images}/>

@@ -5,8 +5,8 @@ import cat1 from "../public/cat1.jpg"
 import cat0 from "../public/cat0.jpg"
 
 const PageBody = ({title, images}) => {
-  const [index, setIndex] = useState();
-  const [image, setImage] = useState()
+  const [index, setIndex] = useState(0);
+  const [image, setImage] = useState(images[index])
   // useState(images[index])
 
   function changeImage() {
@@ -20,10 +20,10 @@ const PageBody = ({title, images}) => {
     console.log(index)
   }
 
-  useEffect(()=>{
-    setIndex(0)
-    setImage(images[index])
-  }, [])
+  // useEffect(()=>{
+  //   setIndex(0)
+  //   setImage(images[index])
+  // }, [])
   
   return (
     <div>
