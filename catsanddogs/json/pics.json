@@ -1,0 +1,22 @@
+[
+    {
+        "url": "cat0.jpg",
+        "type": "cats"
+    },
+    {
+        "url": "cat1.jpg",
+        "type": "cats"
+    },
+    {
+        "url": "dog1.jpg",
+        "type": "dogs"
+    },
+    {
+        "url": "dog2.jpg",
+        "type": "dogs"
+    },
+    {
+        "url": "dog3.jpg",
+        "type": "dogs"
+    }
+]
