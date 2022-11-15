@@ -1,47 +1,54 @@
 # comp523-teamM-techtalk
 
-# Step 1
-Install Frameworks
+This repository is a simple website project to showcase some capabilities of Next.js for a tech-talk.  Follow steps below to run through the project.
 
-Install node js from https://nodejs.org/en/
+# Step 1 - Node.js and yarn
 
-Install yarn:
+If you don't have Node.js installed, you may do so from https://nodejs.org/en/
+
+Install yarn if needed by following these steps:
+
 ```npm install --global yarn```
+
 or 
+
 ```sudo npm install --global yarn```
+
 If prompted, enter password
+
+
+# Step 2 - set up the project files
+
+If you wish to set up the project without cloning the repository, use the following command
 
 ```yarn create next-app catsanddogs```
 
-# Step 2
+If you clone the repository, switch to the ```install``` branch using ```git checkout install```
 
-Run development server
-```cd catsanddogs```
-```yarn dev```
+Then run ```yarn install```
+
+** Note: ** you may have to remove ```.DS_Store``` files before switching branches as these are created automatically on MacOS
+
+
+# Step 3 - Run development server
+
+Run the server using the following commands
+
+```
+cd catsanddogs
+yarn dev
+```
 
 Open webpage on browser, use URL:
 ```http://localhost:3000```
 
-Test that webpage is responsive
-Replace all the return values in index.js to 
-```<div>Hello world</div>```
-Refresh the page on the browser to see the new text
-
-
-Create fies ```cats.js``` and ```dogs.js``` inside the ```pages``` folder
-
-Add code from github repo
-
-Test ```http://localhost:3000/cats```
-Test ```http://localhost:3000/dogs```
-
 Test API route
 ```http://localhost:3000/api/hello```
 
+# Step 4 - Add code from branches
 
-# Step 4
-Create Navbar
-Add new folder ```components``` and add new file ```NavBar.js```
-Create new file ```NavBar.module.css```
-Add elements for navigation for ```/```, ```/cats``` and ```/dogs```
-Add the NavBar component to ```_app.js```
+You may checkout the ```dev1``` through ```dev8``` branches and review the code throughout showing the different features.
+
+If you did not clone the repository, you can add the files manually
+
+The final product should provide access to the ```/cats``` and ```/dogs``` endpoints using dynamic endpoints along with the API routes.
