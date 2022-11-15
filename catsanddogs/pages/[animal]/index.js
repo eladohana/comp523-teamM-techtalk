@@ -32,17 +32,6 @@ useEffect(() => {
   fetchData(url);
   }, [animal]);
 
-  //  async () => await fetch(`/api/getpics/${animal}`)
-  // .then((response) => {
-  //   console.log(response.json())
-  // // setAnimals[response.json]
-  // // console.log(animals)
-  // });
-  // const images = [cat1, cat0]
-  // useEffect(() => {
-  //   // getPics
-  // }, [animal])
-
   return (
     <PageBody title={animal} images={animals}/>
   )
