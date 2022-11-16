@@ -32,6 +32,7 @@ export const getStaticProps = async ({ params }) => {
 
   return {
     props: { date, animalType, animalsImg },
+    revalidate: 10,
   };
 };
 
