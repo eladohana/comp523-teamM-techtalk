@@ -9,18 +9,7 @@ const animals = ({ date, animalType, animalsImg }) => {
   );
 };
 
-export const getStaticPaths = async () => {
-  // Get all of the paths
-  // This will be run on build
-
-  return {
-    paths: [{ params: { animal: "cats" } }, { params: { animal: "dogs" } }],
-    // Any paths not returned by getStaticPaths will result in a 404 page
-    fallback: false,
-  };
-};
-
-export const getStaticProps = async ({ params }) => {
+export const getServerSideProps = async ({ params }) => {
   console.log(params);
   const animalType = params.animal;
   const url = `http://localhost:3000/api/getpics/${animalType}`;
