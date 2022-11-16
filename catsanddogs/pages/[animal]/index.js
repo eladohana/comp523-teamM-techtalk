@@ -1,21 +1,12 @@
-import { useEffect, useState } from "react";
 import PageBody from "../../components/PageBody";
-import { useRouter } from "next/router";
 
-const animals = () => {
-  const router = useRouter();
-  const { animal } = router.query;
-
-  if (animal && animals.length) {
-    return (
-      <div>
-        <PageBody title={animal} images={animals} />
-        <p>Data Fetched on last build: {new Date(date).toLocaleString()}</p>
-      </div>
-    );
-  } else {
-    return <div>Loading image...</div>;
-  }
+const animals = ({ date, animalType, animalsImg }) => {
+  return (
+    <div>
+      <PageBody title={animalType} images={animalsImg} />
+      <p>Data Fetched on last build: {new Date(date).toLocaleString()}</p>
+    </div>
+  );
 };
 
 export const getStaticPaths = async () => {
@@ -31,13 +22,16 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   console.log(params);
-  const url = `/api/getpics/${params.animal}`;
-  const animals = fetchData(url);
+  const animalType = params.animal;
+  const url = `http://localhost:3000/api/getpics/${animalType}`;
+  console.log(url);
+  const animalsImg = await fetchData(url);
+  console.log(animalsImg);
 
   const date = new Date().toISOString();
 
   return {
-    props: { date, animals },
+    props: { date, animalType, animalsImg },
   };
 };
 
@@ -45,16 +39,17 @@ export const fetchData = async (url) => {
   try {
     const response = await fetch(url);
     const json = await response.json();
+    console.log(json);
     console.log(JSON.parse(json).map((x) => x.url));
     // console.log(JSON.parse(json).map(x=> x.url))
 
     // import x from url
     console.log(animals);
     // console.log(json);
+    return JSON.parse(json).map((x) => x.url);
   } catch (error) {
     console.log("error", error);
   }
-  return JSON.parse(json).map((x) => x.url);
 };
 
 export default animals;
