@@ -10,6 +10,7 @@ const animals = () => {
   const router = useRouter();
   const { animal } = router.query;
   const [animals, setAnimals] = useState([]);
+  const [date, setDate] = useState(() => new Date().toLocaleTimeString());
 
   const fetchData = async (url) => {
     try {
@@ -36,7 +37,13 @@ const animals = () => {
   }, [animal]);
 
   if (animal && animals.length) {
-    return <CSRComponent title={animal} images={animals} />;
+    console.log(date);
+    return (
+      <div>
+        <CSRComponent title={animal} images={animals} />
+        <p>Data Fetched on last build: {date}</p>
+      </div>
+    );
   } else {
     return <div>Loading image...</div>;
   }
