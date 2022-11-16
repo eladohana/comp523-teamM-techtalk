@@ -44,8 +44,16 @@ const animals = () => {
         <p>Data Fetched on last build: {date}</p>
       </div>
     );
-  } else {
-    return <div>Loading image...</div>;
+  } else if (animal == "cats") {
+    <div>
+      <CSRComponent title="cats" images={animals} />
+      <p>Data Fetched on last build: {date}</p>
+    </div>;
+  } else if (animal == "dogs") {
+    <div>
+      <CSRComponent title="cats" images={animals} />
+      <p>Data Fetched on last build: {date}</p>
+    </div>;
   }
 };
 
