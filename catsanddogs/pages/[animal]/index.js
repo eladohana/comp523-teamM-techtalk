@@ -30,11 +30,8 @@ const animals = () => {
     const url = `/api/getpics/${animal}`;
     fetchData(url);
   }, [animal]);
-  if (animal && animals.length) {
-    return <PageBody title={animal} images={animals} />;
-  } else {
-    return <div>Loading image...</div>;
-  }
+
+  return <PageBody title={animal} images={animals} />;
 };
 
 export default animals;
