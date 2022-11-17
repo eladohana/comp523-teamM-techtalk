@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST={"[animal]\\index.js -> ../../components/PageBody":{id:2583,files:["static/chunks/675-f67518be07486815.js","static/css/e49bec480e19906a.css","static/chunks/583.767fc0bf018d83e8.js"]}};
