@@ -31,7 +31,13 @@ const animals = () => {
     fetchData(url);
   }, [animal]);
 
-  return <PageBody title={animal} images={animals} />;
+  if (animal && animals.length) {
+    return <PageBody title={animal} images={animals} />;
+  } else {
+    <div>
+      <h1>Loading...</h1>
+    </div>;
+  }
 };
 
 export default animals;
